@@ -10,15 +10,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
-  session,
 }: {
   children: React.ReactNode;
-  session: any;
 }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SessionProvider session={session}>
+        <SessionProvider>
           <main className="flex min-h-screen flex-col items-center justify-between p-20">
             <Navbar />
             {children}
