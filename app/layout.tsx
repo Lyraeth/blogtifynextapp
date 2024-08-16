@@ -11,15 +11,15 @@ const inter = Inter({ subsets: ['latin'] });
 export default function RootLayout({
   children,
   session,
-}: Readonly<{
+}: {
   children: React.ReactNode;
   session: any;
-}>) {
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>
         <SessionProvider session={session}>
-          <main className="flex min-h-screen flex-col items-center justify-between p-24">
+          <main className="flex min-h-screen flex-col items-center justify-between p-20">
             <Navbar />
             {children}
             <Footer />

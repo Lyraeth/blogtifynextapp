@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
 
   let navbarLeft = (
     <Link href={'/'}>
-      <h1 className="bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text pb-8 pt-4 text-center text-xl font-medium tracking-tight text-transparent md:text-4xl dark:from-black dark:via-[#575757] dark:to-[#171717]">
+      <h1 className="bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text pb-8 pt-4 text-center text-xl font-medium tracking-tight text-transparent sm:text-2xl md:text-4xl dark:from-black dark:via-[#575757] dark:to-[#171717]">
         Blogtify
       </h1>
     </Link>
