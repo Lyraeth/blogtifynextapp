@@ -1,6 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Perpose
+
+This project is an implementation of the Fullstack web Next.js Tutorial [How to Build a Fullstack App with Next.js, Prisma, and Vercel Postgres](https://vercel.com/guides/nextjs-prisma-postgres) atau [blogr-nextjs-prisma](https://github.com/prisma/blogr-nextjs-prisma), which previously used Next.js version 13.5.4 with the Pages Router, and which I have rebuilt using Next.js version 14.2.5 with the App Router. The purpose of this is for my learning of Next.js.
+
+In the implementation of this website, I was assisted by the tutorial:
+
+- [Next-Auth in App Router of Next.js](https://medium.com/@rohitkumarkhatri/next-auth-in-app-router-of-next-js-7df037f7a2ad) - learn about how to implement NextAuth.js on Next.js 14 with App Router.
+
+and this project has been deployed on Vercel, you can check it on this link -> [Blogtify](blogtifynextapp.vercel.app)
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
@@ -15,10 +25,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
