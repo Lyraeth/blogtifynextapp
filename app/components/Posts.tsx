@@ -1,6 +1,8 @@
 import prisma from '@/lib/prisma';
 import Link from 'next/link';
 
+export const revalidate = 30;
+
 export default async function Posts() {
   const posts = await prisma.post.findMany({
     where: { published: true },
