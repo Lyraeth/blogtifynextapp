@@ -2,6 +2,8 @@ import { Suspense } from 'react';
 import Loading from './components/Loading';
 import Posts from './components/Posts';
 
+export const revalidate = 30;
+
 export default function Home() {
   return (
     <>

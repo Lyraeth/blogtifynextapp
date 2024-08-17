@@ -8,6 +8,8 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export const revalidate = 30;
+
 export default function RootLayout({
   children,
 }: {
