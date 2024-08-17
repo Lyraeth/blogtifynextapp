@@ -1,7 +1,7 @@
+import { authOptions } from '@/lib/auth';
+import prisma from '@/lib/prisma';
 import { getServerSession } from 'next-auth';
 import { NextResponse } from 'next/server';
-import { authOptions } from '../../lib/auth'; // Ambil opsi autentikasi jika diperlukan
-import prisma from '../../lib/prisma'; // Sesuaikan path untuk prisma
 
 export const POST = async (req: Request) => {
   const body = await req.json();
