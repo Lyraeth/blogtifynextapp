@@ -29,6 +29,14 @@ const Navbar: React.FC = () => {
           {session.user?.name}
         </p>
         <div className="divider divider-horizontal"></div>
+        <button className="btn btn-ghost">
+          <Link href={'/posts/create'}>Create Post</Link>
+        </button>
+        <div className="divider divider-horizontal"></div>
+        <button className="btn btn-ghost">
+          <Link href={'/drafts'}>Posts</Link>
+        </button>
+        <div className="divider divider-horizontal"></div>
         <button onClick={() => signOut()} className="btn btn-ghost">
           Log out
         </button>

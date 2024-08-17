@@ -1,4 +1,5 @@
-import prisma from '../../lib/prisma';
+import PostActions from '@/app/components/PostActions';
+import prisma from '@/lib/prisma';
 export default async function PostPage({ params }: { params: { id: string } }) {
   const post = await prisma.post.findUnique({
     where: {
@@ -29,11 +30,14 @@ export default async function PostPage({ params }: { params: { id: string } }) {
           <p className="mt-3 text-xs text-gray-700">
             Author: {post.author?.name || 'Unknown'}
           </p>
+          <div className="divider"></div>
         </h1>
         <p className="text-md mx-auto text-pretty dark:text-gray-400">
           {post.content}
         </p>
       </div>
+      <div className="divider"></div>
+      <PostActions post={post} />
     </main>
   );
 }
