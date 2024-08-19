@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import Loading from './components/Loading';
 import Posts from './components/Posts';
 
+export const dynamic = 'force-dynamic';
 export default function Home() {
   return (
     <>

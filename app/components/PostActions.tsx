@@ -58,11 +58,11 @@ const PostActions: React.FC<PostActionsProps> = ({ post }) => {
     if (!confirmed) return;
 
     try {
-      const res = await fetch(`/api/delete/${post.id}`, {
+      const res = await fetch(`/api/post/delete/${post.id}`, {
         method: 'DELETE',
       });
       if (res.ok) {
-        router.push('/'); // Redirect ke halaman utama setelah post dihapus
+        router.push('/');
       } else {
         console.error('Failed to delete post');
       }
