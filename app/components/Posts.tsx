@@ -1,9 +1,9 @@
 import prisma from '@/lib/prisma';
 import Link from 'next/link';
-
-export const revalidate = 30;
+import RefreshButton from './RefreshButton';
 
 export default async function Posts() {
+  const startTime = Date.now();
   const posts = await prisma.post.findMany({
     where: { published: true },
     include: {
@@ -12,10 +12,18 @@ export default async function Posts() {
       },
     },
   });
+  const duration = Date.now() - startTime;
 
   return (
     <div className="mx-auto max-w-7xl px-4 lg:px-6">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <div className="text-center">
+        <h1 className="text-3xl">Recent posts</h1>
+        <p className="text-sm text-gray-500">
+          Fetched {posts.length} posts in {duration}ms
+        </p>
+        <RefreshButton />
+      </div>
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:mt-10 sm:pt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         {posts.map(post => (
           <Link href={`/p/${post.id}`} key={post.id}>
             <div className="card">
